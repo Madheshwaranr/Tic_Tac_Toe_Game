@@ -76,6 +76,5 @@ def restart_game():
     current_player = " X "
     return render_template('index.html', board=board, current_player=current_player)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
