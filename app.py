@@ -78,7 +78,7 @@ def make_move():
     return render_template("index.html", board=board, result=result)
 
 
-@app.route("/restart_game", methods=["POST"])
+@app.route("/restart_game", methods=["POST"]) 
 def restart_game():
     global board, current_player
     board = ["   " for _ in range(9)]
