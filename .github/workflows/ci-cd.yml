@@ -26,4 +26,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: madheshravi/tic_tac_toe:${{ github.run_id }}
+          tags: madheshravi/tic_tac_toe:${{ github.run_number }}
+
+      - name: update image tag in deploment.yml
+        run: |
+          sed -i "s|tic_tac_toe:.*|tic_tac_toe:${ github.run_number }|g" tic_tac_toe/K8s/deployment.yaml
+        
