@@ -14,7 +14,6 @@ spec:
     spec: 
       containers: 
       - name: myapp 
-        image: madheshravi/tic_tac_toe:t1
-        imagePullPolicy: Never 
+        image: madheshravi/tic_tac_toe:t1 
         ports: 
         - containerPort: 5000 
