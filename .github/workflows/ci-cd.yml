@@ -31,3 +31,10 @@ jobs:
       - name: update image tag in deploment.yml
         run: |
           sed -i "s|madheshravi/tic_tac_toe:.*|madheshravi/tic_tac_toe:${{ github.run_number }}|g" K8s/deployment.yaml
+      - name: Commit and push deployment.yaml
+        run: |
+          git config user.name "Madheshwaranr"
+          git config user.email "madheshravi2001@gmail.com"
+          git add K8s/deployment.yaml
+          git commit -m "Update image tag to ${{ github.run_number }}" || echo "No changes to commit"
+          git push origin HEAD:${{ github.ref_name }}
