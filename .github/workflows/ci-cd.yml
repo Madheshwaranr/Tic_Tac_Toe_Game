@@ -30,4 +30,4 @@ jobs:
 
       - name: update image tag in deploment.yml
         run: |
-          sed -i "s|tic_tac_toe:.*|tic_tac_toe:${{ github.run_number }}|g" K8s/deployment.yaml
+          sed -i "s|madheshravi/tic_tac_toe:.*|madheshravi/tic_tac_toe:${{ github.run_number }}|g" K8s/deployment.yaml
