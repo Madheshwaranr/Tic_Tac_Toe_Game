@@ -26,4 +26,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: madheshravi/tic_tac_toe:t1
+          tags: madheshravi/tic_tac_toe:${{ github.run_id }}
